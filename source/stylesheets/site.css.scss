@@ -1,0 +1,24 @@
+@import "pace.css";
+#pagecontent {
+    opacity: 0;
+}
+
+#pagecontent {
+    -webkit-transform: opacity 0.5s ease;
+    -moz-transform: opacity 0.5s ease;
+    -o-transform: opacity 0.5s ease;
+    -ms-transform: opacity 0.5s ease;
+    transform: opacity 0.5s ease;
+}
+
+body.pace-running #pagecontent {
+    opacity: 0;
+}
+
+body.pace-done #pagecontent {
+    opacity: 1;
+}
+
+.pace.pace-inactive {
+    display: none;
+}

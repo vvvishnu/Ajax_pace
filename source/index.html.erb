@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="cover" id="pagecontent">
+        <h2>AJAX</h2>
+
+        <button id="search" type="button" onclick="loadDoc()">Request data</button>
+
+        <p id="demo"></p>
+
+    </div>
+
+
+
+
+    <script>
+        function loadDoc() {
+            Pace.restart();
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("demo").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax_info.txt", true);
+            xhttp.send();
+
+
+        }
+    </script>
+
+</body>
+
+</html>
